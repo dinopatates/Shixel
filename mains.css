@@ -17,6 +17,7 @@
     border-width: 5px;
     width: 10%;
     height: 100%;
+    cursor: pointer;
 
 }
 
@@ -30,20 +31,25 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    height: 42.3vw;
 }
 
 .listLeft {
     width: 200px;
-    height: 42.3vw;
-    background-color: rgb(35, 77, 77);
+    height: 100%;
+    background-color: rgb(255, 255, 255);
     display: inline-block;
+    border-style: solid ;
+    border-color: rgb(230, 120, 155);
 }
 
 .emptyRight {
     width: 200px;
-    height: 42.3vw;
-    background-color: aqua;
+    height: 100;
+    background-color: rgb(255, 255, 255);
     display: inline-block;
+    border-style: solid ;
+    border-color: rgb(230, 120, 155);
 }
 
 
@@ -54,8 +60,8 @@
     display: inline-block;
    height: 90%;
    width: 40vw;
-   margin-left: 17vw;
-   margin-right: 17vw;
+   margin-left: 19vw;
+   margin-right: 19vw;
    margin-top: 3vw;
     cursor: pointer;
 }
@@ -65,7 +71,6 @@
     position: absolute;
     border: 1px solid;
     z-index: 1;
-    top: 100px;
 
 
 }
@@ -78,4 +83,16 @@
 .canvasGridContainer {
     display: flex;
     justify-content: center;
+}
+
+.clear {
+        background-color: rgb(230, 120, 155);
+
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    width: 10%;
+    height: 100%;
+    cursor: pointer;
+
 }
