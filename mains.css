@@ -1,0 +1,81 @@
+.toolsList {
+    background-color: rgb(255, 138, 177);
+    width: 100%;
+    height: 7vw;
+    display: flex;
+    flex-direction: row;
+
+
+
+}
+
+.pencilIcon {
+    background-color: rgb(230, 120, 155);
+
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    width: 10%;
+    height: 100%;
+
+}
+
+.pencilIconImage {
+    height: 100%;
+    width: 100%;
+}
+
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.listLeft {
+    width: 200px;
+    height: 42.3vw;
+    background-color: rgb(35, 77, 77);
+    display: inline-block;
+}
+
+.emptyRight {
+    width: 200px;
+    height: 42.3vw;
+    background-color: aqua;
+    display: inline-block;
+}
+
+
+
+.canvas {
+    border-style: solid;
+    border-color: black;
+    display: inline-block;
+   height: 90%;
+   width: 40vw;
+   margin-left: 17vw;
+   margin-right: 17vw;
+   margin-top: 3vw;
+    cursor: pointer;
+}
+
+.grid {
+    display: grid;
+    position: absolute;
+    border: 1px solid;
+    z-index: 1;
+    top: 100px;
+
+
+}
+
+.grid div {
+    border: 1px solid
+    rgba(0, 0, 0, 0.1);
+}
+
+.canvasGridContainer {
+    display: flex;
+    justify-content: center;
+}
