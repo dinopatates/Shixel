@@ -1,35 +1,40 @@
-let canvas = document.getElementById("canvas");
-let ctx = canvas.getContext("2d");
-let isDrawing = false;
-function startDrawing(event) {
- isDrawing = true;
- draw(event);
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+
+let coord = { x: 0, y: 0 };
+ctx.canvas.width = 600;
+ctx.canvas.height = 600;
+
+
+function reposition(event) {
+  coord.x = event.clientX - canvas.offsetLeft;
+  coord.y = event.clientY - canvas.offsetTop;
 }
+
+function start(event) {
+  document.addEventListener("mousemove", draw);
+  reposition(event);
+}
+
+function stop() {
+  document.removeEventListener("mousemove", draw);
+}
+
 function draw(event) {
- if (!isDrawing) return;
- const x = event.clientX - canvas.offsetLeft;
- const y = event.clientY - canvas.offsetTop;
- ctx.lineTo(x, y);
- ctx.stroke();
+  ctx.beginPath();
+
+  ctx.lineWidth = 5;
+  ctx.lineCap = "round";
+  ctx.strokeStyle = "#ACD3ED";
+
+  ctx.moveTo(coord.x, coord.y);
+  reposition(event);
+
+  ctx.lineTo(coord.x, coord.y);
+  ctx.stroke();
 }
-function stopDrawing() {
- isDrawing = false;
- ctx.beginPath();
-}
-canvas.addEventListener("mousedown", startDrawing, draw);
-canvas.addEventListener("mousemove", draw);
-canvas.addEventListener("mouseup", stopDrawing);
-canvas.addEventListener("mouseout", stopDrawing);
 
 
-const clearButton = document.getElementById("clear");
-clearButton.addEventListener("click", function() {
- ctx.clearRect(0, 0, canvas.width, canvas.height);
-});
-
-
-
-
-const pencil = document.getElementsById("pencilIcon");
-pencil.addEventListener("mousedown", function() {
-});
+document.addEventListener("mousedown", start);
+document.addEventListener("mouseup", stop);

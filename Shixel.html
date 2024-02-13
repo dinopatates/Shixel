@@ -1,54 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shixel Pixel Art</title>
 
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="mains.css">
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="mains.css" />
+  </head>
 
-</head>
-
-<body id="body" class="body">
-
-
+  <body id="body" class="body">
     <header class="toolsList">
-
-        <button id="pencilIcon" class="pencilIcon"> <img class="pencilIconImage" src="./Images/iconpencil.png" alt=""
-                srcset=""> </button> <button id="clear" class="clear"></button>
-
+      <button id="pencilIcon" class="pencilIcon">
+        <img class="pencilIconImage" src="./Images/iconpencil.png" alt="" />
+      </button>
+      <button id="clear" class="clear">Clear</button>
     </header>
 
-
-
-
-
-    <main class="main">
-
-        <div class="listLeft"></div>
-
-
-        <div class="canvasGridContainer">
-
-            <div class="grid"> </div>
-            <canvas id="canvas" class="canvas"></canvas>
-
-
-
-            <div class="emptyRight"></div>
-        </div>
-
-
-
-    </main>
+    <div class="main-wrapper">
+      <main class="main">
+        <ul class="colors-list">
+            <li>Black</li>
+            <li>Pink</li>
+        </ul>
+        <canvas id="canvas" class="canvas"></canvas>
+      </main>
+    </div>
 
     <footer></footer>
+  </body>
 
-</body>
-
-
-<script src="main.js"></script>
-
+  <script src="main.js"></script>
 </html>
