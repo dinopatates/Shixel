@@ -1,34 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shixel Pixel Art</title>
 
-    <link rel="stylesheet" href="normalize.css" />
-    <link rel="stylesheet" href="mains.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shixel Pixel Art</title>
 
-  <body id="body" class="body">
-    <header class="toolsList">
-      <button id="pencilIcon" class="pencilIcon">
-        <img class="pencilIconImage" src="./Images/iconpencil.png" alt="" />
-      </button>
-      <button id="clear" class="clear">Clear</button>
-    </header>
+  <link rel="stylesheet" href="normalize.css" />
+  <link rel="stylesheet" href="mains.css" />
+</head>
 
-    <div class="main-wrapper">
-      <main class="main">
-        <ul class="colors-list">
-            <button id="blackColorPick">Black</button>
-            <button id="pinkColorPick">Pink</button>
-        </ul>
-        <canvas id="canvas" class="canvas"></canvas>
-      </main>
-    </div>
+<body id="body" class="body">
+  <header class="toolsList">
+    <button id="pencilIcon" class="pencilIcon">
+      <img class="pencilIconImage" src="./Images/iconpencil.png" alt="" />
+    </button>
+    <button class="eraser" id="eraser">Eraser</button>
+    <button id="clear" class="clear">Clear</button>
+  </header>
 
-    <footer></footer>
-  </body>
+  <div class="main-wrapper">
+    <main class="main">
+      <ul class="draws">
 
-  <script src="main.js"></script>
+      </ul>
+      <canvas id="canvas" class="canvas"></canvas>
+
+      <ul class="colors-list">
+        <div class="ColorLine">
+          <button class="colors black" id="blackColorPick"></button>
+          <button class="colors pink" id="pinkColorPick"></button>
+          <button class="colors yellow" id="yellowColorPick"></button>
+        </div>
+        <div class="ColorLine">
+          <button class="colors red" id="redColorPick"></button>
+          <button class="colors green" id="greenColorPick"></button>
+        </div>
+
+        <!--<input type="color" id="colorPicker">
+          const colorpicked = document.getElementById("colorPicker")-->
+      </ul>
+    </main>
+  </div>
+
+  <footer></footer>
+</body>
+
+<script src="main.js"></script>
+
 </html>

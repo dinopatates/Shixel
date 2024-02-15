@@ -19,7 +19,7 @@
 }
 
 .main-wrapper {
-  background-color: tomato;
+  background-color: rgb(204, 94, 130);
   height: calc(100vh - 160px);
   display: flex;
   align-items: center;
@@ -29,7 +29,7 @@
 .main {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+justify-content: center;
 }
 
 .emptyRight {
@@ -46,6 +46,9 @@
   cursor: pointer;
   height: 600px;
   width: 600px;
+  margin-left: 350px;
+  margin-right: 300px;
+  margin-top: 50px;
 }
 
 .clear {
@@ -55,4 +58,95 @@
   border-width: 5px;
   cursor: pointer;
   width: 160px;
+}
+
+.colors-list {
+background-color: rgb(255, 150, 199);
+width: 200px;
+height: 600px;
+padding-bottom: 100px;
+display: flex;
+margin-top: 0px;
+margin-bottom: 0px;
+border-style: solid;
+border-color: black;
+
+}
+.draws {
+background-color: rgb(255, 150, 199);
+width: 200px;
+height: 600px;
+padding-bottom: 100px;
+display: flex;
+margin-top: 0px;
+margin-bottom: 0px;
+border-style: solid;
+border-color: black;
+}
+
+
+.colors {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  border-style: solid;
+  border-color: black;
+  cursor: pointer;
+}
+
+.black {
+  color: white;
+  text-decoration: none;
+  background-color: black;
+}
+
+.pink {
+  text-decoration: none;
+  background-color: pink;
+}
+
+.eraser {
+    background-color: rgb(230, 120, 155);
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    cursor: pointer;
+    width: 160px;
+}
+
+.colors2 {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+
+.colors-list {
+  display: flex;
+flex-direction: column;
+}
+
+.ColorLine {
+display: flex;
+flex-direction: row;
+}
+
+.ColorLine {
+  display: flex;
+flex-direction: row;
+}
+
+.clearBoth {
+  clear: both;
+}
+
+.yellow {
+background-color: yellow;
+}
+
+.red {
+background-color: red;
+}
+
+.green {
+background-color: green;
 }
