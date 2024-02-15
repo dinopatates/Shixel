@@ -15,7 +15,7 @@ ctx.canvas.height = 600;
 function reposition(event) {
   coord.x = event.clientX - canvas.offsetLeft;
   coord.y = event.clientY - canvas.offsetTop;
-}
+
 
 function start(event) {
   document.addEventListener("mousemove", draw);
