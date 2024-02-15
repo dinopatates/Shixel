@@ -42,9 +42,9 @@ ctx.stroke.Style = pink;
 
 blackColor.addEventListener("click", function click() {
   console.log("The pen is now black")
-  ctx.strokeStyle = pink;
+  ctx.strokeStyle = black;
 })
-ctx.strokeStyle = pink;  // peut être utiliser un if else pour que cela marche étant donné qu'il ne prend en considération que la dernière attribution.
+ctx.strokeStyle = black;  // peut être utiliser un if else pour que cela marche étant donné qu'il ne prend en considération que la dernière attribution.
 
   ctx.moveTo(coord.x, coord.y);
   reposition(event);
@@ -57,3 +57,8 @@ ctx.strokeStyle = pink;  // peut être utiliser un if else pour que cela marche 
 
 document.addEventListener("mousedown", start);
 document.addEventListener("mouseup", stop);
+
+const clearButton = document.getElementById("clear");
+clearButton.addEventListener("click", function() {
+ ctx.clearRect(0, 0, canvas.width, canvas.height);
+});
