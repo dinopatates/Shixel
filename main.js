@@ -118,3 +118,4 @@ document.getElementById('downloadCanvas').addEventListener('click', function(e) 
   createEl.click();
   createEl.remove();
 });
+
