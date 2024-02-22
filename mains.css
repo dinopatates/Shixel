@@ -44,6 +44,8 @@ justify-content: center;
 }
 
 .canvas {
+  background-color: white;
+  color: white;
   border-style: solid;
   border-color: black;
   display: inline-block;
@@ -155,6 +157,24 @@ background-color: green;
   width: 160px;
 }
 
+.toolWidth {
+  background-color: rgb(230, 120, 155);
+      border-style: solid;
+      border-color: black;
+      border-width: 5px;
+      cursor: pointer;
+      width: 250px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+.potentiometer {
+  border-radius: 0px;
+  
+    }
+  
+
   }
 
   @media (prefers-color-scheme: dark) {
@@ -201,6 +221,7 @@ background-color: green;
     }
     
     .canvas {
+      background-color: white;
       border-style: solid;
       border-color: black;
       display: inline-block;
@@ -312,9 +333,26 @@ background-color: green;
       width: 160px;
     }
     
+    .clearImage {
+      width: 100%;
+    }
   
+    .potentiometer {
+  border-radius: 0px;
+  
+    }
+  
+    .toolWidth {
+      background-color: rgb(45, 40, 107);
+          border-style: solid;
+          border-color: black;
+          border-width: 5px;
+          cursor: pointer;
+          width: 250px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+    }
+
   }
 
-  .clearImage {
-    width: 100%;
-  }

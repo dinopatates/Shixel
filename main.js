@@ -4,9 +4,10 @@ const blackColor = document.getElementById("blackColorPick");
 const pinkColor = document.getElementById("pinkColorPick");
 const eraserTool = document.getElementById("eraser");
 const pencilTool = document.getElementById("pencilIcon");
-const yellowColor = document.getElementById("yellowColorPick")
-const redColor = document.getElementById("redColorPick")
-const greenColor = document.getElementById("greenColorPick")
+const yellowColor = document.getElementById("yellowColorPick");
+const redColor = document.getElementById("redColorPick");
+const greenColor = document.getElementById("greenColorPick");
+let toolWidth = ctx.lineWidth;
 
 
 let tool = "pen"
@@ -42,7 +43,7 @@ function stop() {
 function draw(event) {
   ctx.beginPath();
 
-  ctx.lineWidth = 5;
+  ctx.lineWidth = toolWidth;
   ctx.lineCap = "round";
 
   ctx.strokeStyle = currentColor; // Set stroke color here
@@ -119,3 +120,6 @@ document.getElementById('downloadCanvas').addEventListener('click', function(e) 
   createEl.remove();
 });
 
+document.getElementById('inputWidth').addEventListener('click', function() {
+  toolWidth = inputWidth.value
+}) 
