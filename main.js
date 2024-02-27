@@ -10,6 +10,9 @@ const purpleColor = document.getElementById("purpleColorPick");
 const redColor = document.getElementById("redColorPick");
 const whiteColor = document.getElementById("whiteColorPick");
 const yellowColor = document.getElementById("yellowColorPick");
+const brownColor = document.getElementById("brownColorPick");
+const blueColor = document.getElementById("blueColorPick");
+const cyanColor = document.getElementById("cyanColorPick");
 
 const tools = document.querySelectorAll(".tools")
 const colors = document.querySelectorAll('.colors')
@@ -37,6 +40,11 @@ for (let i = 0; i < colors.length; i++) {
 
     currentColor = colors[i].getAttribute('data-color');
 
+    for (let j = 0; j < colors.length; j++) {
+      colors[j].style.borderColor = "black"; 
+    }
+
+     colors[i].style.borderColor = "white";
     console.log("you choose the color: " + currentColor);
   });
 }

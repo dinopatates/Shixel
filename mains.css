@@ -191,6 +191,18 @@
   background-color: purple;
 }
 
+.brown {
+  background-color: #452A1D;
+}
+
+.blue {
+  background-color:  #89CFF0;
+}
+
+.darkBlue {
+  background-color: #00008B;
+}
+
 .colorPickerSection {
   margin-top: 50px;
   display: flex;
