@@ -356,3 +356,34 @@ background-color: green;
 
   }
 
+.orange {
+  background-color: orange;
+}
+
+.purple {
+  background-color: gray;
+}
+
+.gray {
+  background-color: white;
+}
+
+.white {
+  background-color: purple;
+}
+
+.colorPickerText {
+  font-family: "Pixelify Sans";
+  color: white;
+  font-size: xx-large;
+}
+
+.colorPickerSection {
+  margin-top: 50px;
+}
+
+.colorPicker {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}

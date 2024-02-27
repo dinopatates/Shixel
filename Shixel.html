@@ -8,18 +8,26 @@
 
   <link rel="stylesheet" href="normalize.css" />
   <link rel="stylesheet" href="mains.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
 </head>
 
 <body id="body" class="body">
   <header class="toolsList">
     <button id="pencilIcon" class="pencilIcon">
-      <img class="pencilIconImage" src="./Images/iconpencil.png" alt="" /><!--dessin à refaire--> 
+      <img class="pencilIconImage" src="./Images/iconpencil.png" alt="" /><!--dessin à refaire-->
     </button>
-    <button class="eraser" id="eraser"><img src="./images/gomme.png" alt=""></button><!--dessin à refaire--> 
-    <button id="clear" class="clear"><img class="clearImage" src="./images/bomb.png" alt=""></button> <!--dessin à refaire--> 
-    <button id="downloadCanvas" class="downloadCanvas"><img src="./images/save.png" alt=""></button> 
-<div class="toolWidth">
-    <input type="range" min="1" max="30" value="5" id="inputWidth" class="potentiometer">
+    <button class="eraser" id="eraser"><img src="./images/gomme.png" alt=""></button><!--dessin à refaire-->
+    <button id="clear" class="clear"><img class="clearImage" src="./images/bomb.png" alt=""></button>
+    <!--dessin à refaire-->
+    <button id="downloadCanvas" class="downloadCanvas"><img src="./images/save.png" alt=""></button>
+    <div class="toolWidth">
+      <input type="range" min="1" max="30" value="5" id="inputWidth" class="potentiometer">
     </div>
   </header>
 
@@ -32,16 +40,27 @@
 
       <ul class="colors-list">
         <div class="ColorLine">
-          <button class="colors black" id="blackColorPick"></button>
-          <button class="colors pink" id="pinkColorPick"></button>
-          <button class="colors yellow" id="yellowColorPick"></button>
+          <button class="colors black" id="blackColorPick" data-color="#000000"></button>
+          <button class="colors pink" id="pinkColorPick" data-color="#FFC0CB"></button>
+          <button class="colors yellow" id="yellowColorPick" data-color="#FFFF00"></button>
         </div>
         <div class="ColorLine">
-          <button class="colors red" id="redColorPick"></button>
-          <button class="colors green" id="greenColorPick"></button>
+          <button class="colors red" id="redColorPick" data-color="#ff0000"></button>
+          <button class="colors green" id="greenColorPick" data-color="#008000"></button>
+          <button class="colors orange" id="orangeColorPick" data-color="#FFA500"></button>
+        </div>
+        <div class="ColorLine">
+          <button class="colors white" id="whiteColorPick" data-color="#A020F0"></button>
+          <button class="colors gray" id="grayColorPick" data-color="#FFFFFF"></button>
+          <button class="colors purple" id="purpleColorPick" data-color="#808080"></button>
         </div>
 
-        
+        <div class="colorPickerSection">
+          <label class="colorPickerText" id="colorPickerText">Color Picker</label>
+          <input class="colorPicker" type="color" id="colorPicker" value="#ffffff">
+        </div>
+
+
         <!--<input type="color" id="colorPicker">
           const colorpicked = document.getElementById("colorPicker")-->
       </ul>

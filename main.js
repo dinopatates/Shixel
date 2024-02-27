@@ -1,29 +1,50 @@
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
+
 const blackColor = document.getElementById("blackColorPick");
-const pinkColor = document.getElementById("pinkColorPick");
-const eraserTool = document.getElementById("eraser");
-const pencilTool = document.getElementById("pencilIcon");
-const yellowColor = document.getElementById("yellowColorPick");
-const redColor = document.getElementById("redColorPick");
+const grayColor = document.getElementById("grayColorPick");
 const greenColor = document.getElementById("greenColorPick");
+const orangeColor = document.getElementById("orangeColorPick");
+const pinkColor = document.getElementById("pinkColorPick");
+const purpleColor = document.getElementById("purpleColorPick");
+const redColor = document.getElementById("redColorPick");
+const whiteColor = document.getElementById("whiteColorPick");
+const yellowColor = document.getElementById("yellowColorPick");
+
+const colors = document.querySelectorAll('.colors')
+
+
+const clearButton = document.getElementById("clear");
+const eraserTool = document.getElementById("eraser");
+const eraserToolButton = document.getElementById("eraser");
+const pencilTool = document.getElementById("pencilIcon");
+
 let toolWidth = ctx.lineWidth;
 
 
 let tool = "pen"
 
-const black = "#000000";
-const pink = "#FFC0CB";
-const yellow = "#FFFF00";
-const red = "#ff0000";
-const green = "#008000"
 
 
 let coord = { x: 0, y: 0 };
 ctx.canvas.width = 600;
 ctx.canvas.height = 600;
 
-let currentColor = black; // Default color is black
+
+for (let i = 0; i < colors.length; i++) {
+  colors[i].addEventListener("click", function () {
+
+    currentColor = colors[i].getAttribute('data-color');
+
+    console.log("you choose the color: " + currentColor);
+  });
+}
+  
+
+
+
+
+//let currentColor = black; // Default color is black
 
 function reposition(event) {
   coord.x = event.clientX - canvas.offsetLeft;
@@ -55,49 +76,55 @@ function draw(event) {
   ctx.stroke();
 }
 
-pinkColor.addEventListener("click", function click() {
-  console.log("The pen is now pink");
-  currentColor = pink; // Change currentColor to pink
-});
-
-blackColor.addEventListener("click", function click() {
-  console.log("The pen is now black");
-  currentColor = black; // Change currentColor to black
-});
-
-yellowColor.addEventListener("click", function click() {
-  console.log("The pen is now yellow");
-  currentColor = yellow; // Change currentColor to black
-});
-
-redColor.addEventListener("click", function click() {
-  console.log("The pen is now red");
-  currentColor = red; // Change currentColor to black
-});
-
-greenColor.addEventListener("click", function click() {
-  console.log("The pen is now green");
-  currentColor = green; // Change currentColor to black
-});
 
 
 
-pencilTool.addEventListener("click", function click() {
-  console.log("You took the pen");
-  selectedTool = "pencilTool";
+
+colorPicker.addEventListener("input", function input() {
+  let color = colorPicker.value;
+console.log("Selected color: " + color);
+currentColor = color;
+  
 })
 
-const eraserToolButton = document.getElementById("eraser");
-eraserToolButton.addEventListener("mousedown", function() {
- selectedTool = "eraser";
- console.log("eraser A C T I V A T E D")
- ctx.globalCompositeOperation = "destination-out";
+
+function handleTool(selectedTool) {
+  if (selectedTool === "pencilTool") {
+    pencilTool.style.borderColor = "white";
+  }
+  else if (selectedTool !== "pencilTool") {
+    pencilTool.style.borderColor = "black";
+  }
+  if (selectedTool === "eraser") {
+    eraserTool.style.borderColor = "white";
+  }
+  else if (selectedTool !== "eraser") {
+    eraserTool.style.borderColor = "black";
+  }
+  if (selectedTool === "clear") {
+    clearButton.style.borderColor = "white";
+  }
+  else if (selectedTool !== "clear") {
+    clearButton.style.borderColor = "black";
+  }
+}
+
+
+pencilTool.addEventListener("click", function() {
+  console.log("You took the pen");
+  handleTool("pencilTool")
+})
+
+eraserToolButton.addEventListener("click", function() {
+  handleTool("eraser")
+  console.log("eraser A C T I V A T E D")
+  ctx.globalCompositeOperation = "destination-out";
 });
 
 const pencilToolButton = document.getElementById("pencilTool");
-pencilTool.addEventListener("mousedown", function() {
- selectedTool = "pencil";
- ctx.globalCompositeOperation = "source-over";
+pencilTool.addEventListener("mousedown", function () {
+  selectedTool = "pencil";
+  ctx.globalCompositeOperation = "source-over";
 });
 
 
@@ -105,12 +132,13 @@ pencilTool.addEventListener("mousedown", function() {
 document.addEventListener("mousedown", start);
 document.addEventListener("mouseup", stop);
 
-const clearButton = document.getElementById("clear");
-clearButton.addEventListener("click", function() {
+
+clearButton.addEventListener("click", function () {
+  selectedTool = "clear";
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 });
 
-document.getElementById('downloadCanvas').addEventListener('click', function(e) {
+document.getElementById('downloadCanvas').addEventListener('click', function (e) {
   let canvasUrl = canvas.toDataURL("image/jpeg", 0.5);
   console.log(canvasUrl);
   const createEl = document.createElement('a');
@@ -120,6 +148,6 @@ document.getElementById('downloadCanvas').addEventListener('click', function(e) 
   createEl.remove();
 });
 
-document.getElementById('inputWidth').addEventListener('click', function() {
+document.getElementById('inputWidth').addEventListener('click', function () {
   toolWidth = inputWidth.value
 }) 
