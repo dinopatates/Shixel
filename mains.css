@@ -168,14 +168,10 @@ background-color: green;
       justify-content: center;
       align-items: center;
 }
-
-.potentiometer {
-  border-radius: 0px;
-  
-    }
-  
-
-  }
+div.toolWidth #inputWidth {
+  background-color: blue;
+}
+}
 
   @media (prefers-color-scheme: dark) {
 
@@ -388,4 +384,5 @@ background-color: green;
   width: 100px;
   height: 100px;
   border-radius: 50%;
+}
 }
