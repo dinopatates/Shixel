@@ -192,14 +192,11 @@
   background-color: purple;
 }
 
-.colorPickerText {
-  font-family: "Pixelify Sans";
-  color: white;
-  font-size: xx-large;
-}
-
 .colorPickerSection {
   margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .colorPicker {
