@@ -11,6 +11,7 @@ const redColor = document.getElementById("redColorPick");
 const whiteColor = document.getElementById("whiteColorPick");
 const yellowColor = document.getElementById("yellowColorPick");
 
+const tools = document.querySelectorAll(".tools")
 const colors = document.querySelectorAll('.colors')
 
 
@@ -87,7 +88,7 @@ currentColor = color;
   
 })
 
-
+/*
 function handleTool(selectedTool) {
   if (selectedTool === "pencilTool") {
     pencilTool.style.borderColor = "white";
@@ -108,22 +109,38 @@ function handleTool(selectedTool) {
     clearButton.style.borderColor = "black";
   }
 }
+*/
+
+for (let i = 0; i < tools.length; i++) {
+  tools[i].addEventListener("click", function () {
+    currentTool = tools[i].getAttribute('data-tool');
+    
+    // Output the selected tool to the console
+    console.log("you choose the tool: " + currentTool);
+    
+
+    for (let j = 0; j < tools.length; j++) {
+      tools[j].style.borderColor = "black"; 
+    }
+    
+
+    tools[i].style.borderColor = "white";
+  });
+}
 
 
 pencilTool.addEventListener("click", function() {
   console.log("You took the pen");
-  handleTool("pencilTool")
 })
 
 eraserToolButton.addEventListener("click", function() {
-  handleTool("eraser")
+
   console.log("eraser A C T I V A T E D")
   ctx.globalCompositeOperation = "destination-out";
 });
 
 const pencilToolButton = document.getElementById("pencilTool");
 pencilTool.addEventListener("mousedown", function () {
-  selectedTool = "pencil";
   ctx.globalCompositeOperation = "source-over";
 });
 
@@ -137,16 +154,6 @@ clearButton.addEventListener("click", function () {
   selectedTool = "clear";
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 });
-
-/*document.getElementById('downloadCanvas').addEventListener('click', function (e) {
-  let canvasUrl = canvas.toDataURL("image/jpeg", 0.5);
-  console.log(canvasUrl);
-  const createEl = document.createElement('a');
-  createEl.href = canvasUrl;
-  createEl.download = "download-this-canvas";
-  createEl.click();
-  createEl.remove();
-});*/
 
 document
   .getElementById("downloadCanvas")
