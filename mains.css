@@ -1,39 +1,38 @@
+@media (prefers-color-scheme: dark) {
 
-  @media (prefers-color-scheme: dark) {
+  .toolsList {
+    background-color: rgb(79, 48, 165);
+    height: 160px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+  }
 
-    .toolsList {
-      background-color: rgb(79, 48, 165);
-      height: 160px;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      justify-content: space-evenly;
-    }
-    
-    .pencilIcon {
-      background-color: rgb(45, 40, 107);
-      border-style: solid;
-      border-color: black;
-      border-width: 5px;
-      cursor: pointer;
-      width: 160px;
-    }
-    
-    .pencilIconImage {
-      width: 100%;
-    }
-    
-    .main-wrapper {
-      background-color: rgb(45, 40, 107);
-      height: calc(100vh - 160px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .main {
-      display: flex;
-      flex-direction: row;
+  .pencilIcon {
+    background-color: rgb(45, 40, 107);
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    cursor: pointer;
+    width: 160px;
+  }
+
+  .pencilIconImage {
+    width: 100%;
+  }
+
+  .main-wrapper {
+    background-color: rgb(45, 40, 107);
+    height: calc(100vh - 160px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
   }
 
@@ -78,8 +77,9 @@
     border-color: black;
     display: flex;
     flex-direction: column;
-    }
-    .draws {
+  }
+
+  .draws {
     background-color: rgb(79, 48, 165);
     width: 200px;
     height: 600px;
@@ -145,39 +145,39 @@
 
   .green {
     background-color: green;
-    }
-    
-    .downloadCanvas {
-      background-color: rgb(45, 40, 107);
-      border-style: solid;
-      border-color: black;
-      border-width: 5px;
-      cursor: pointer;
-      width: 160px;
-    }
-    
-    .clearImage {
-      width: 100%;
-    }
-  
-    .potentiometer {
-  border-radius: 0px;
-  
-    }
-  
-    .toolWidth {
-      background-color: rgb(45, 40, 107);
-          border-style: solid;
-          border-color: black;
-          border-width: 5px;
-          cursor: pointer;
-          width: 250px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-    }
+  }
+
+  .downloadCanvas {
+    background-color: rgb(45, 40, 107);
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    cursor: pointer;
+    width: 160px;
+  }
+
+  .clearImage {
+    width: 100%;
+  }
+
+  .potentiometer {
+    border-radius: 0px;
 
   }
+
+  .toolWidth {
+    background-color: rgb(45, 40, 107);
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    cursor: pointer;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
 
 .orange {
   background-color: orange;
@@ -200,7 +200,7 @@
 }
 
 .blue {
-  background-color:  #89CFF0;
+  background-color: #89CFF0;
 }
 
 .darkBlue {

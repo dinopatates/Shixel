@@ -41,10 +41,10 @@ for (let i = 0; i < colors.length; i++) {
     currentColor = colors[i].getAttribute('data-color');
 
     for (let j = 0; j < colors.length; j++) {
-      colors[j].style.borderColor = "black"; 
+      colors[j].style.borderColor = "black";
     }
 
-     colors[i].style.borderColor = "white";
+    colors[i].style.borderColor = "white";
     console.log("you choose the color: " + currentColor);
   });
 }
@@ -86,34 +86,34 @@ function draw(event) {
 
 colorPicker.addEventListener("input", function input() {
   let color = colorPicker.value;
-console.log("Selected color: " + color);
-currentColor = color;
-  
+  console.log("Selected color: " + color);
+  currentColor = color;
+
 })
 
 
 for (let i = 0; i < tools.length; i++) {
   tools[i].addEventListener("click", function () {
     currentTool = tools[i].getAttribute('data-tool');
-    
+
     console.log("you choose the tool: " + currentTool);
-    
+
 
     for (let j = 0; j < tools.length; j++) {
-      tools[j].style.borderColor = "black"; 
+      tools[j].style.borderColor = "black";
     }
-    
+
 
     tools[i].style.borderColor = "white";
   });
 }
 
 
-pencilTool.addEventListener("click", function() {
+pencilTool.addEventListener("click", function () {
   console.log("You took the pen");
 })
 
-eraserToolButton.addEventListener("click", function() {
+eraserToolButton.addEventListener("click", function () {
 
   console.log("eraser A C T I V A T E D")
   ctx.globalCompositeOperation = "destination-out";
@@ -144,7 +144,7 @@ document
     if (saveName) {
       const createEl = document.createElement("a");
       createEl.href = canvasUrl;
-      createEl.download = saveName + ".jpeg"; 
+      createEl.download = saveName + ".jpeg";
       createEl.click();
       createEl.remove();
     } else {
