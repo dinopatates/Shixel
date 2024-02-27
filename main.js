@@ -138,7 +138,7 @@ clearButton.addEventListener("click", function () {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 });
 
-document.getElementById('downloadCanvas').addEventListener('click', function (e) {
+/*document.getElementById('downloadCanvas').addEventListener('click', function (e) {
   let canvasUrl = canvas.toDataURL("image/jpeg", 0.5);
   console.log(canvasUrl);
   const createEl = document.createElement('a');
@@ -146,7 +146,25 @@ document.getElementById('downloadCanvas').addEventListener('click', function (e)
   createEl.download = "download-this-canvas";
   createEl.click();
   createEl.remove();
-});
+});*/
+
+document
+  .getElementById("downloadCanvas")
+  .addEventListener("click", function (e) {
+    let canvasUrl = canvas.toDataURL("image/jpeg", 0.5);
+    console.log(canvasUrl);
+    let saveName = prompt("Enter the name for your masterpiece:");
+    if (saveName) {
+      const createEl = document.createElement("a");
+      createEl.href = canvasUrl;
+      createEl.download = saveName + ".jpeg"; 
+      createEl.click();
+      createEl.remove();
+    } else {
+      alert("Please enter a name for your drawing.");
+    }
+  });
+
 
 document.getElementById('inputWidth').addEventListener('click', function () {
   toolWidth = inputWidth.value
