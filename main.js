@@ -40,12 +40,7 @@ for (let i = 0; i < colors.length; i++) {
     console.log("you choose the color: " + currentColor);
   });
 }
-  
 
-
-
-
-//let currentColor = black; // Default color is black
 
 function reposition(event) {
   coord.x = event.clientX - canvas.offsetLeft;
@@ -68,7 +63,7 @@ function draw(event) {
   ctx.lineWidth = toolWidth;
   ctx.lineCap = "round";
 
-  ctx.strokeStyle = currentColor; // Set stroke color here
+  ctx.strokeStyle = currentColor;
 
   ctx.moveTo(coord.x, coord.y);
   reposition(event);
@@ -88,34 +83,11 @@ currentColor = color;
   
 })
 
-/*
-function handleTool(selectedTool) {
-  if (selectedTool === "pencilTool") {
-    pencilTool.style.borderColor = "white";
-  }
-  else if (selectedTool !== "pencilTool") {
-    pencilTool.style.borderColor = "black";
-  }
-  if (selectedTool === "eraser") {
-    eraserTool.style.borderColor = "white";
-  }
-  else if (selectedTool !== "eraser") {
-    eraserTool.style.borderColor = "black";
-  }
-  if (selectedTool === "clear") {
-    clearButton.style.borderColor = "white";
-  }
-  else if (selectedTool !== "clear") {
-    clearButton.style.borderColor = "black";
-  }
-}
-*/
 
 for (let i = 0; i < tools.length; i++) {
   tools[i].addEventListener("click", function () {
     currentTool = tools[i].getAttribute('data-tool');
     
-    // Output the selected tool to the console
     console.log("you choose the tool: " + currentTool);
     
 
