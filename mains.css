@@ -120,12 +120,6 @@
     width: 160px;
   }
 
-  .colors2 {
-    width: 50px;
-    height: 50px;
-    margin: 10px;
-  }
-
   .ColorLine {
     display: flex;
     flex-direction: row;
@@ -158,11 +152,6 @@
 
   .clearImage {
     width: 100%;
-  }
-
-  .potentiometer {
-    border-radius: 0px;
-
   }
 
   .toolWidth {
