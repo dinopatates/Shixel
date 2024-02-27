@@ -1,244 +1,71 @@
-/* Light mode */
-@media (prefers-color-scheme: light) {
-  
 
-.toolsList {
-  background-color: rgb(255, 138, 177);
-  height: 160px;
-  display: flex;
-  flex-direction: row;
-}
+@media (prefers-color-scheme: dark) {
+  .toolsList {
+    background-color: rgb(79, 48, 165);
+    height: 160px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+  }
 
-.pencilIcon {
-  background-color: rgb(230, 120, 155);
-  border-style: solid;
-  border-color: black;
-  border-width: 5px;
-  cursor: pointer;
-  width: 160px;
-}
-
-.pencilIconImage {
-  width: 100%;
-}
-
-.main-wrapper {
-  background-color: rgb(204, 94, 130);
-  height: calc(100vh - 160px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.main {
-  display: flex;
-  flex-direction: row;
-justify-content: center;
-}
-
-.emptyRight {
-  background-color: rgb(255, 255, 255);
-  display: inline-block;
-  border-style: solid;
-  border-color: rgb(230, 120, 155);
-}
-
-.canvas {
-  background-color: white;
-  color: white;
-  border-style: solid;
-  border-color: black;
-  display: inline-block;
-  cursor: pointer;
-  height: 600px;
-  width: 600px;
-  margin-left: 350px;
-  margin-right: 300px;
-  margin-top: 50px;
-}
-
-.clear {
-  background-color: rgb(230, 120, 155);
-  border-style: solid;
-  border-color: black;
-  border-width: 5px;
-  cursor: pointer;
-  width: 160px;
-}
-
-.colors-list {
-background-color: rgb(255, 150, 199);
-width: 200px;
-height: 600px;
-padding-bottom: 100px;
-display: flex;
-margin-top: 0px;
-margin-bottom: 0px;
-border-style: solid;
-border-color: black;
-display: flex;
-flex-direction: column;
-}
-.draws {
-background-color: rgb(255, 150, 199);
-width: 200px;
-height: 600px;
-padding-bottom: 100px;
-display: flex;
-margin-top: 0px;
-margin-bottom: 0px;
-border-style: solid;
-border-color: black;
-}
-
-
-.colors {
-  width: 50px;
-  height: 50px;
-  margin: 10px;
-  border-style: solid;
-  border-color: black;
-  cursor: pointer;
-}
-
-.black {
-  color: white;
-  text-decoration: none;
-  background-color: black;
-}
-
-.pink {
-  text-decoration: none;
-  background-color: pink;
-}
-
-.eraser {
-    background-color: rgb(230, 120, 155);
+  .pencilIcon {
+    background-color: rgb(45, 40, 107);
     border-style: solid;
     border-color: black;
     border-width: 5px;
     cursor: pointer;
     width: 160px;
-}
+  }
 
-.colors2 {
-  width: 50px;
-  height: 50px;
-  margin: 10px;
-}
+  .pencilIconImage {
+    width: 100%;
+  }
 
-.ColorLine {
-display: flex;
-flex-direction: row;
-}
-
-.clearBoth {
-  clear: both;
-}
-
-.yellow {
-background-color: yellow;
-}
-
-.red {
-background-color: red;
-}
-
-.green {
-background-color: green;
-}
-
-.downloadCanvas {
-  background-color: rgb(230, 120, 155);
-  border-style: solid;
-  border-color: black;
-  border-width: 5px;
-  cursor: pointer;
-  width: 160px;
-}
-
-.toolWidth {
-  background-color: rgb(230, 120, 155);
-      border-style: solid;
-      border-color: black;
-      border-width: 5px;
-      cursor: pointer;
-      width: 250px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-}
-div.toolWidth #inputWidth {
-  background-color: blue;
-}
-}
-
-  @media (prefers-color-scheme: dark) {
-
-    .toolsList {
-      background-color: rgb(79, 48, 165);
-      height: 160px;
-      display: flex;
-      flex-direction: row;
-    }
-    
-    .pencilIcon {
-      background-color: rgb(45, 40, 107);
-      border-style: solid;
-      border-color: black;
-      border-width: 5px;
-      cursor: pointer;
-      width: 160px;
-    }
-    
-    .pencilIconImage {
-      width: 100%;
-    }
-    
-    .main-wrapper {
-      background-color: rgb(45, 40, 107);
-      height: calc(100vh - 160px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .main {
-      display: flex;
-      flex-direction: row;
+  .main-wrapper {
+    background-color: rgb(45, 40, 107);
+    height: calc(100vh - 160px);
+    display: flex;
+    align-items: center;
     justify-content: center;
-    }
-    
-    .emptyRight {
-      background-color: rgb(255, 255, 255);
-      display: inline-block;
-      border-style: solid;
-      border-color: rgb(45, 40, 107);
-    }
-    
-    .canvas {
-      background-color: white;
-      border-style: solid;
-      border-color: black;
-      display: inline-block;
-      cursor: pointer;
-      height: 600px;
-      width: 600px;
-      margin-left: 350px;
-      margin-right: 300px;
-      margin-top: 50px;
-    }
-    
-    .clear {
-      background-color: rgb(45, 40, 107);
-      border-style: solid;
-      border-color: black;
-      border-width: 5px;
-      cursor: pointer;
-      width: 160px;
-    }
-    
-    .colors-list {
+  }
+
+  .main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .emptyRight {
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    border-style: solid;
+    border-color: rgb(45, 40, 107);
+  }
+
+  .canvas {
+    background-color: white;
+    border-style: solid;
+    border-color: black;
+    display: inline-block;
+    cursor: pointer;
+    height: 600px;
+    width: 600px;
+    margin-left: 350px;
+    margin-right: 300px;
+    margin-top: 50px;
+  }
+
+  .clear {
+    background-color: rgb(45, 40, 107);
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    cursor: pointer;
+    width: 160px;
+  }
+
+  .colors-list {
     background-color: rgb(79, 48, 165);
     width: 200px;
     height: 600px;
@@ -250,8 +77,8 @@ div.toolWidth #inputWidth {
     border-color: black;
     display: flex;
     flex-direction: column;
-    }
-    .draws {
+  }
+  .draws {
     background-color: rgb(79, 48, 165);
     width: 200px;
     height: 600px;
@@ -261,96 +88,93 @@ div.toolWidth #inputWidth {
     margin-bottom: 0px;
     border-style: solid;
     border-color: black;
-    }
-    
-    
-    .colors {
-      width: 50px;
-      height: 50px;
-      margin: 10px;
-      border-style: solid;
-      border-color: black;
-      cursor: pointer;
-    }
-    
-    .black {
-      color: white;
-      text-decoration: none;
-      background-color: black;
-    }
-    
-    .pink {
-      text-decoration: none;
-      background-color: pink;
-    }
-    
-    .eraser {
-        background-color: rgb(45, 40, 107);
-        border-style: solid;
-        border-color: black;
-        border-width: 5px;
-        cursor: pointer;
-        width: 160px;
-    }
-    
-    .colors2 {
-      width: 50px;
-      height: 50px;
-      margin: 10px;
-    }
-    
-    .ColorLine {
+  }
+
+  .colors {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    border-style: solid;
+    border-color: black;
+    cursor: pointer;
+  }
+
+  .black {
+    color: white;
+    text-decoration: none;
+    background-color: black;
+  }
+
+  .pink {
+    text-decoration: none;
+    background-color: pink;
+  }
+
+  .eraser {
+    background-color: rgb(45, 40, 107);
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    cursor: pointer;
+    width: 160px;
+  }
+
+  .colors2 {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+  }
+
+  .ColorLine {
     display: flex;
     flex-direction: row;
-    }
-    
-    .clearBoth {
-      clear: both;
-    }
-    
-    .yellow {
-    background-color: yellow;
-    }
-    
-    .red {
-    background-color: red;
-    }
-    
-    .green {
-    background-color: green;
-    }
-    
-    .downloadCanvas {
-      background-color: rgb(45, 40, 107);
-      border-style: solid;
-      border-color: black;
-      border-width: 5px;
-      cursor: pointer;
-      width: 160px;
-    }
-    
-    .clearImage {
-      width: 100%;
-    }
-  
-    .potentiometer {
-  border-radius: 0px;
-  
-    }
-  
-    .toolWidth {
-      background-color: rgb(45, 40, 107);
-          border-style: solid;
-          border-color: black;
-          border-width: 5px;
-          cursor: pointer;
-          width: 250px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-    }
-
   }
+
+  .clearBoth {
+    clear: both;
+  }
+
+  .yellow {
+    background-color: yellow;
+  }
+
+  .red {
+    background-color: red;
+  }
+
+  .green {
+    background-color: green;
+  }
+
+  .downloadCanvas {
+    background-color: rgb(45, 40, 107);
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    cursor: pointer;
+    width: 160px;
+  }
+
+  .clearImage {
+    width: 100%;
+  }
+
+  .potentiometer {
+    border-radius: 0px;
+  }
+
+  .toolWidth {
+    background-color: rgb(45, 40, 107);
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    cursor: pointer;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
 .orange {
   background-color: orange;
@@ -382,5 +206,4 @@ div.toolWidth #inputWidth {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-}
 }
