@@ -82,7 +82,12 @@ function draw(event) {
 
 
 
+colorPicker.addEventListener("click", function click() {
+  let color = colorPicker.value;
+  console.log("Selected color: " + color);
+  currentColor = color;
 
+})
 
 colorPicker.addEventListener("input", function input() {
   let color = colorPicker.value;
