@@ -16,7 +16,7 @@ const cyanColor = document.getElementById("cyanColorPick");
 
 const tools = document.querySelectorAll(".tools")
 const colors = document.querySelectorAll('.colors')
-
+const colorPicker = document.getElementById("colorPicker")
 
 const clearButton = document.getElementById("clear");
 const eraserTool = document.getElementById("eraser");
@@ -34,11 +34,12 @@ let coord = { x: 0, y: 0 };
 ctx.canvas.width = 600;
 ctx.canvas.height = 600;
 
-
 for (let i = 0; i < colors.length; i++) {
   colors[i].addEventListener("click", function () {
-
     currentColor = colors[i].getAttribute('data-color');
+
+    // Set background color of colorPicker to white when a color is clicked
+    colorPicker.style.backgroundColor = "black";
 
     for (let j = 0; j < colors.length; j++) {
       colors[j].style.borderColor = "black";
@@ -49,6 +50,21 @@ for (let i = 0; i < colors.length; i++) {
   });
 }
 
+colorPicker.addEventListener("click", function click() {
+
+  colorPicker.style.backgroundColor = "white";
+  let color = colorPicker.value;
+  console.log("Selected color: " + color);
+  currentColor = color;
+});
+
+colorPicker.addEventListener("input", function input() {
+
+  colorPicker.style.backgroundColor = "white";
+  let color = colorPicker.value;
+  console.log("Selected color: " + color);
+  currentColor = color;
+});
 
 function reposition(event) {
   coord.x = event.clientX - canvas.offsetLeft;

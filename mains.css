@@ -208,7 +208,10 @@
 .colorPicker {
   width: 100px;
   height: 100px;
-  border-radius: 50%;
+  border-style: solid;
+  border-width: 20%;
+background-color: none;
+background-color: black;
 }
 
 label{
